@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -42,12 +43,10 @@ body {
   background-color: #ddd2d2;
   color: var(--charcoal);
   font-size: 1.6rem;
-  padding: 1.6rem;
 }
 
 article {
   position: relative;
-  margin-bottom: 1.6rem;
 }
 
 a {
@@ -73,8 +72,9 @@ a:visited {
   background-color: var(--newsprint);
   padding: 1.6rem 3.2rem;
   max-width: 1600px;
+  height: 6.25rem;
   margin: 0 auto;
-  position: relative;
+  /* position: relative; */
 }
 
 .nav__heading--one {
@@ -142,6 +142,32 @@ a:visited {
   cursor: pointer;
 }
 
+.nav__dialog {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: none;
+}
+
+.show_dialog {
+  display: block;
+}
+
+.nav__user {
+  margin-left: auto;
+  background-color: var(--charcoal);
+  color: var(--newsprint);
+  width: 20rem;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout {
+  text-decoration: underline;
+}
+
+/* HIDING MOBILE NAVS */
+
 .mobile--container--one {
   display: none;
   transition: 5000ms;
@@ -157,12 +183,16 @@ a:visited {
   transition: 5000ms;
 }
 
-/* RESPONSIVE TABLET */
+/* RESPONSIVE*/
 
 @media screen and (max-width: 1024px) {
   .show {
     display: block;
     transition: 5000ms;
+  }
+
+  .nav__user {
+    display: none;
   }
 
   .nav--mobile {
@@ -174,7 +204,7 @@ a:visited {
   }
 
   .nav__li--one {
-    height: 4rem;
+    height: 8rem;
     display: flex;
     align-items: center;
     font-family: "open_sauce_sansmedium";
@@ -184,7 +214,7 @@ a:visited {
 
   .nav--mobile__user {
     padding: 1.6rem;
-    height: 4rem;
+    height: 8rem;
     display: flex;
     justify-content: space-between;
     font-family: "open_sauce_sanslight";
