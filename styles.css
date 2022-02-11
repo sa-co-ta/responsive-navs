@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "open_sauce_sansextrabold";
+  src: url("./fonts/opensaucesans-extrabold-webfont.woff2") format("woff2"),
+    url("./fonts/opensaucesans-extrabold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sauce_sanslight";
+  src: url("./fonts/opensaucesans-light-webfont.woff2") format("woff2"),
+    url("./fonts/opensaucesans-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sauce_sansmedium";
+  src: url("./fonts/opensaucesans-medium-webfont.woff2") format("woff2"),
+    url("./fonts/opensaucesans-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --charcoal: #404040;
+  --newsprint: #fbf1f1;
+  --charcoal-700: #6d6d6d;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "open_sauce_sansmedium";
+  background-color: #ddd2d2;
+  color: var(--charcoal);
+  font-size: 1.6rem;
+  padding: 1.6rem;
+}
+
+article {
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--charcoal);
+}
+
+a:visited {
+  color: var(--charcoal);
+}
+
+.nav__icon {
+  width: 2rem;
+  display: none;
+  transition: 100ms;
+}
+
+/* NAVIGATION ONE */
+
+.nav--one {
+  display: flex;
+  align-items: center;
+  background-color: var(--newsprint);
+  padding: 1.6rem 3.2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav__heading--one {
+  font-family: "open_sauce_sansextrabold";
+  padding: 0;
+  margin-right: auto;
+}
+
+.nav__ul--one {
+  width: 40rem;
+  justify-content: space-between;
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.nav__li--one {
+  transition: 300ms;
+}
+
+.nav__li--one:hover {
+  opacity: 0.6;
+}
+
+/* NAVIGATION TWO */
+
+.nav__ul--two {
+  width: 60rem;
+  justify-content: space-between;
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.nav__btn {
+  background-color: var(--charcoal);
+  font-family: "open_sauce_sansmedium";
+  border: none;
+  width: 15rem;
+  height: 4.8rem;
+  color: var(--newsprint);
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.nav__btn:hover {
+  opacity: 0.6;
+}
+
+/* NAVIGATION THREE */
+
+.nav__ul--three {
+  width: 50rem;
+  justify-content: space-between;
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.nav__image {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.mobile--container--one {
+  display: none;
+  transition: 5000ms;
+}
+
+.mobile--container--two {
+  display: none;
+  transition: 5000ms;
+}
+
+.mobile--container--three {
+  display: none;
+  transition: 5000ms;
+}
+
+/* RESPONSIVE TABLET */
+
+@media screen and (max-width: 1024px) {
+  .show {
+    display: block;
+    transition: 5000ms;
+  }
+
+  .nav--mobile {
+    width: 10rem;
+    background-color: var(--charcoal);
+    position: absolute;
+    right: 0;
+    width: 37.5rem;
+  }
+
+  .nav__li--one {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    font-family: "open_sauce_sansmedium";
+    color: var(--newsprint);
+    padding: 1.6rem;
+  }
+
+  .nav--mobile__user {
+    padding: 1.6rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: "open_sauce_sanslight";
+    align-items: center;
+    background-color: var(--charcoal-700);
+    transition: 300ms;
+  }
+
+  .nav--mobile__user:hover {
+    background-color: #000;
+  }
+
+  p {
+    color: var(--newsprint);
+  }
+
+  p:last-child {
+    color: var(--newsprint);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 13rem;
+  }
+
+  .nav__li--one:hover {
+    background: #000;
+  }
+
+  .nav__icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav__ul--one {
+    display: none;
+  }
+
+  .nav__ul--two {
+    display: none;
+  }
+
+  .nav__ul--three {
+    display: none;
+  }
+}
